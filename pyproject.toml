@@ -1,14 +1,13 @@
 [project]
-name = "sandman_main"
+name = "sandman_core"
 version = "1.0.3"
-description = "The main application for the Sandman bed controller."
+description = "Core library for the Sandman bed controller."
 authors = [
   { name="Shawn Lindberg", email="shawn.lindberg@gmail.com" },
 ]
 requires-python = ">=3.12"
 dependencies = [
   "gpiod>=2.4.2",
-  "paho-mqtt>=2.1.0",
   "tzdata>=2026.2",
   "whenever>=0.10.0",
 ]
@@ -18,10 +17,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/sandman-project/sandman_main"
+Homepage = "https://github.com/sandman-project/sandman_core"
 
 [tool.pytest.ini_options]
-pythonpath = ["sandman_main"]
+pythonpath = ["src"]
 testpaths = ["tests"]
 
 [tool.ruff]
@@ -61,5 +60,4 @@ ignore = [
 dev = [
     "mypy>=2.1.0",
     "pytest>=9.0.3",
-    "types-paho-mqtt>=1.6.0.20240321",
 ]
